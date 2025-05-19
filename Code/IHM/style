@@ -1,0 +1,59 @@
+/* Style CSS personnalisé pour l'interface robot */
+body {
+  font-family: 'Open Sans', sans-serif;
+  /* On peut ajuster la taille de police globale si besoin */
+  background-color: #f8f9fa; /* Gris clair (Bootstrap bg-light) */
+  color: #212529;           /* Texte par défaut en gris foncé bootstrap */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #f0f0f0 0%, #fce7d8 100%);
+  color: #212529;
+}
+
+/* Liens de navigation actifs */
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Ajustement des boutons du pad directionnel */
+.btn-secondary.btn-lg {
+  width: 70px;
+  height: 70px;
+  /* Les flèches font-awesome étant légèrement plus petites que le bouton,
+     on centre parfaitement via line-height si nécessaire */
+  line-height: 1.2;
+}
+
+/* Bouton stop en rouge plus visible */
+.btn-danger.btn-lg {
+  width: 70px;
+  height: 70px;
+}
+
+/* On ajoute une transition pour adoucir les interactions des boutons */
+button.btn {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+button.btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Pour le bouton micro (mode vocal), on ajoute l’effet de pulsation en enregistrement */
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(220,53,69, 0.7); }
+  70%  { box-shadow: 0 0 0 15px rgba(220,53,69, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220,53,69, 0); }
+}
+#recordButton.btn-danger {
+  animation: pulse 1s infinite;
+}
+
+/* Style de la carte de transcription pour qu'elle soit bien visible */
+#transcriptText {
+  min-height: 100px;
+  white-space: pre-wrap; /* permettre les retours à la ligne s'il y a beaucoup de texte */
+}

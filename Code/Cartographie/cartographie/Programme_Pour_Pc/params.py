@@ -1,0 +1,15 @@
+# Réseau
+PC_PORT = 17000
+
+# Traitement pointcloud
+VOXEL_SIZE = 0.02
+OUTLIER_NB = 20
+OUTLIER_STD = 1.5
+
+# Paramètres ICP
+ICP_MAX_DISTANCE = 0.15
+ICP_FITNESS_THRESH = 0.5
+ICP_MAX_ITERATIONS = 50
+
+# Visualisation
+PLOT_REFRESH_RATE = 0.2  # seconds
